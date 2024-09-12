@@ -10,6 +10,7 @@
 
 html {
   font-size: 100%;
+  overflow: hidden;
 } /*16px*/
 
 :root {
@@ -284,14 +285,22 @@ ul {
   margin-bottom: 2rem;
 }
 .info {
-  line-height: 2rem;
+  line-height: 1.7rem;
   font-style: italic;
 }
 
 .hide {
   visibility: hidden;
+  transition: all 0.1s ease-out;
 }
 
 .accordion-section.toggle-height {
-  height: 10rem;
+  height: 11rem;
+}
+
+.our-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  color: var(--primary-500);
 }

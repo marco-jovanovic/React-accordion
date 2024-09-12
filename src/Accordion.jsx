@@ -1,20 +1,22 @@
 import React from 'react';
 import SingleAccordion from './SingleAccordion';
 
-function Accordion({ questione, showInfo, setShowInfo }) {
+function Accordion({ questione, handleToggle, selectedId, handleClose }) {
   return (
     <div>
-      {questione.map((item) => {
+      {questione.map((item, index) => {
         const { id, info, title } = item;
 
         return (
           <SingleAccordion
             key={id}
             id={id}
+            index={index}
             info={info}
             title={title}
-            showInfo={showInfo}
-            setShowInfo={setShowInfo}
+            handleToggle={handleToggle}
+            selectedId={selectedId}
+            handleClose={handleClose}
           />
         );
       })}
